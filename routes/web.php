@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ComicController;
+use App\Models\Comic;
 use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
