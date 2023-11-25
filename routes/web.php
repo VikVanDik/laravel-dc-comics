@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ComicController;
+use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [PageController::class, 'index'])->name('home');
+Route::get('/contacts', [PageController::class, 'contacts'])->name('contacts');
+
+Route::resource('comics', ComicController::class);
